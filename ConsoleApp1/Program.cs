@@ -1,12 +1,10 @@
 ﻿namespace ConsoleApp1
 {
-    internal class Program
+    public class Logic
     {
-        static void Main(string[] args)
+        public static string Compare(string text)
         {
-            string text = "asd daaffaf a ff a f fad dasasaafasdss";
             int count = 0;
-
             for (int i = 0; i < text.Length - 1; i++)
             {
                 if (char.IsLetter(text[i]))
@@ -17,8 +15,20 @@
                     }
                 }
             }
+            string outMessage = $"Кол-во пар одинаковых соседних букв: {count}";
+            return outMessage;
+        }
+    }
 
-            Console.WriteLine($"Кол-во пар одинаковых соседних букв: {count}");
+    internal class Program
+    {
+
+        static void Main(string[] args)
+        {
+            string text = "asd daaffaf a ff a f fad dasasaafasdss";
+            string message = Logic.Compare(text);
+
+            Console.WriteLine(message);
         }
     }
 }
