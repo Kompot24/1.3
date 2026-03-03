@@ -2,7 +2,7 @@
 {
     public class Logic
     {
-        public static string Compare(string text)
+        public static string CountPairs(string text)
         {
             int count = 0;
             for (int i = 0; i < text.Length - 1; i++)
@@ -22,11 +22,11 @@
 
     internal class Program
     {
-
         static void Main(string[] args)
         {
+            //1.3
             string text = "asd daaffaf a ff a f fad dasasaafasdss";
-            string message = Logic.Compare(text);
+            string message = Logic.CountPairs(text);
 
             Console.WriteLine(message);
         }

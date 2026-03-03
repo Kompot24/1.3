@@ -12,26 +12,26 @@ namespace ConsoleApp1.Tests
     public class LogicTests
     {
         [TestMethod()]
-        public void firstTest()
+        public void fivePairs()
         {
             string text = "asd daaffaf a ff a f fad dasasaafasdss";
-            string message = Logic.Compare(text);
+            string message = Logic.CountPairs(text);
             Assert.AreEqual("Кол-во пар одинаковых соседних букв: 5", message);
         }
 
         [TestMethod()]
-        public void secondTest()
+        public void nonePairs()
         {
             string text = "gdhugdl glhifgdhfgd g h42342342342";
-            string message = Logic.Compare(text);
+            string message = Logic.CountPairs(text);
             Assert.AreEqual("Кол-во пар одинаковых соседних букв: 0", message);
         }
 
         [TestMethod()]
-        public void thirstTest()
+        public void ninePairs()
         {
             string text = "7435o7y4gh5 7hg45 tyhgy45t hogh 4otgy 4o8754 g4ho87o458 o87gh4o4ghgggggssasaasdfso74gh54gh54 7 sfsdddd784tgh7t4ohto74tg4o 45gt5o4t go4";
-            string message = Logic.Compare(text);
+            string message = Logic.CountPairs(text);
             Assert.AreEqual("Кол-во пар одинаковых соседних букв: 9", message);
         }
     }
